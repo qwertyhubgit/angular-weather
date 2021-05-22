@@ -1,0 +1,19 @@
+<div class="form">
+    <input type="text" [(ngModel)]="name" placeholder="City name">
+    <button (click)="getData(name)">Search</button>
+</div>
+
+<div class="contain" *ngIf="loading">
+    <img src="https://cdn.statically.io/img/i.pinimg.com/originals/c5/46/8b/c5468b3a6c846040e0f66e507c976e43.gif" width="50px" height="50px">
+</div>
+
+<div *ngIf="warning.length" class="warning">
+    {{ warning | uppercase }} <span (click)="closeErr()" style="cursor: pointer;">&#x2715;</span>
+</div>
+
+<div class="contain" *ngIf="info.name">
+    <div class="contain__data">
+        <div>Temperature</div>
+        <div>{{ info.main.temp - 273.15 | number: '1.0-0' }}</div>
+    </div>
+</div>

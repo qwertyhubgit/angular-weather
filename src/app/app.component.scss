@@ -1,0 +1,27 @@
+.head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    margin-top: 30px;
+    section {
+        padding: 20px;
+        background: rgba(240, 240, 240, 0.5);
+    }
+    a {
+        margin-right: 10px;
+    }
+}
+.active a {
+    font-weight: 900;
+    color: darkred;
+}
+
+.information {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+}
